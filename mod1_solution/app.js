@@ -8,6 +8,10 @@
     function LunchCheckController($scope) {
       $scope.foodList = "";
       $scope.message = "";
+        
+      $scope.clean = function () {
+        $scope.message = "";
+      };
     
       $scope.sayMessage = function () {
         if($scope.foodList==""){
