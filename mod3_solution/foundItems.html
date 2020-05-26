@@ -1,0 +1,11 @@
+
+<ol  ng-if='NIDcontroller.found.length'>
+    <li ng-repeat='item in NIDcontroller.found' >
+        {{ item.name }} {{ item.description }}
+          <button ng-click="NIDcontroller.onRemove({index: $index});">Narrow It Down For Me!</button>
+        </li>
+      </ol>
+  </ol>
+  <div ng-if='!NIDcontroller.found.length'>
+    Nothing found
+  </div>
