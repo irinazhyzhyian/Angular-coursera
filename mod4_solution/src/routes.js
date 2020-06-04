@@ -26,12 +26,12 @@
                           }
                   })
                   .state('items', {
-                          url: '/items/{itemsId}',
+                          url: '/items/{categoryShortName}',
                           templateUrl: 'src/menuapp/templates/items.component.template.html',
                           controller: 'ItemsController as itemsCont',
                           resolve: {
                                   items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
-                                                 return MenuDataService.getItemsForCategory($stateParams.itemsId);                                                       
+                                                 return MenuDataService.getItemsForCategory($stateParams.categoryShortName);                                                       
                                           }]
                           }
                   });

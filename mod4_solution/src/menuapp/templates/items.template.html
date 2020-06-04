@@ -3,8 +3,8 @@
 
 <span> {{ items.item}} </span>
 <div>Item name: {{ items.item}}</div>-->
-<ul>
-    <li ng-repeat="item in $ctrl.items">
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in $ctrl.items">
             ({{item.short_name}}) {{item.name}} 
     </li>
 </ul>
